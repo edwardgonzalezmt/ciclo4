@@ -1,6 +1,0 @@
-Tienda\model\User.class
-Tienda\TiendaApplication.class
-Tienda\repository\UserRepository.class
-Tienda\controller\UserController.class
-Tienda\repository\crud\UserCrudRepository.class
-Tienda\service\UserService.class
