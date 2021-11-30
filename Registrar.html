@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link rel="stylesheet" href="css/Registrar.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Registrar Usuario</title>
+</head>
+
+<body background=img/fondo.jpg>
+    <header>
+        <a href="index.html"><img src="img/principal.png"></a>
+    </header>
+    <div id="login">
+        <h3 class="text-center  pt-1">DE ALTO TURMEQUÉ LTDA</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" >
+                            <h3 class="text-center text-info">Crear Cuenta</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Nombre:</label><br />
+                                <input type="username" name="username" id="username" class="form-control" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="useremail" class="text-info">E-mail:</label><br />
+                                <input type="email" name="useremail" id="useremail" class="form-control" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Contraseña:</label><br />
+                                <input type="text" name="password" id="password" class="form-control" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordrepeat" class="text-info">Confirmar tu Contraseña:</label><br />
+                                <input type="text" name="passwordrepeat" id="passwordrepeat" class="form-control" required/>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" id="boton" class="btn btn-primary" onclick=consultar()>Crear</button>
+                            </div>
+                            <div class="form-group text-center">
+                                <label for="remember-me" class="text-info">
+                                    <span>Ya tienes una cuenta? <a href="login.html" class="text-info">Inicia sesion aqui</a></span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="JS/Registrar.js"></script>
+</body>
+
+</html>
