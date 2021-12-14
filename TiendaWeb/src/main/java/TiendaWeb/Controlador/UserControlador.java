@@ -3,6 +3,7 @@ package TiendaWeb.Controlador;
 import TiendaWeb.Modelo.User;
 import TiendaWeb.Servicio.UserServicio;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -31,6 +32,11 @@ public class UserControlador {
     public List<User> getAll() {
         return userService.getAll();
     }
+     @GetMapping("/{id}")
+    public Optional<User> getUser(@PathVariable("id") int id){
+        return userService.getUser(id);
+    }
+    
       @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
     public User create(@RequestBody User user) {
