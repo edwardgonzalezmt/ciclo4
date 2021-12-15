@@ -1,7 +1,7 @@
 package TiendaWeb.Servicio;
 
-import TiendaWeb.Modelo.Clothes;
-import TiendaWeb.Repositorio.ClothesRepositorio;
+import TiendaWeb.Modelo.Clothe;
+import TiendaWeb.Repositorio.ClotheRepositorio;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,19 +12,19 @@ import org.springframework.stereotype.Service;
  * @author ANDRES
  */
 @Service
-public class ClothesServicio {
+public class ClotheServicio {
     @Autowired
-    private ClothesRepositorio clothesRepository;
+    private ClotheRepositorio clothesRepository;
 
-    public List<Clothes> getAll() {
+    public List<Clothe> getAll() {
         return clothesRepository.getAll();
     }
 
-   public Optional<Clothes> getClothes(String reference) {
+   public Optional<Clothe> getClothes(String reference) {
         return clothesRepository.getClothes(reference);
     }
 
-    public Clothes create(Clothes accesory) {
+    public Clothe create(Clothe accesory) {
         if (accesory.getReference() == null) {
             return accesory;
         } else {
@@ -32,10 +32,10 @@ public class ClothesServicio {
         }
     }
 
-    public Clothes update(Clothes accesory) {
+    public Clothe update(Clothe accesory) {
 
         if (accesory.getReference() != null) {
-            Optional<Clothes> accesoryDb = clothesRepository.getClothes(accesory.getReference());
+            Optional<Clothe> accesoryDb = clothesRepository.getClothes(accesory.getReference());
             if (!accesoryDb.isEmpty()) {
                 
                 if (accesory.getCategory() != null) {

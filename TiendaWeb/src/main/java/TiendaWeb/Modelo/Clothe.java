@@ -16,7 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Clothes {
+public class Clothe {
     
     @Id
     private String reference;

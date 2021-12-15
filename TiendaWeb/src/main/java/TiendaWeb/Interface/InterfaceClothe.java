@@ -5,13 +5,13 @@
  */
 package TiendaWeb.Interface;
 
-import TiendaWeb.Modelo.Clothes;
+import TiendaWeb.Modelo.Clothe;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
  *
  * @author ANDRES
  */
-public interface InterfaceClothes extends MongoRepository<Clothes, String> {
+public interface InterfaceClothe extends MongoRepository<Clothe, String> {
     
 }

@@ -1,37 +1,37 @@
 package TiendaWeb.Repositorio;
 
-import TiendaWeb.Interface.InterfaceClothes;
-import TiendaWeb.Modelo.Clothes;
+import TiendaWeb.Modelo.Clothe;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import TiendaWeb.Interface.InterfaceClothe;
 
 /**
  *
  * @author ANDRES
  */
 @Repository
-public class ClothesRepositorio {
+public class ClotheRepositorio {
     @Autowired
-    private InterfaceClothes clothesCrudrepository;
+    private InterfaceClothe clothesCrudrepository;
 
-    public List<Clothes> getAll() {
+    public List<Clothe> getAll() {
         return clothesCrudrepository.findAll();
     }
 
-    public Optional<Clothes> getClothes(String reference) {
+    public Optional<Clothe> getClothes(String reference) {
         return clothesCrudrepository.findById(reference);
     }
-    public Clothes create(Clothes clothes) {
+    public Clothe create(Clothe clothes) {
         return clothesCrudrepository.save(clothes);
     }
 
-    public void update(Clothes clothes) {
+    public void update(Clothe clothes) {
         clothesCrudrepository.save(clothes);
     }
     
-    public void delete(Clothes clothes) {
+    public void delete(Clothe clothes) {
         clothesCrudrepository.delete(clothes);
     }
 }
