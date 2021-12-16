@@ -74,4 +74,12 @@ public class ClotheServicio {
         }).orElse(false);
         return aBoolean;
     }
+    public List<Clothe> gadgetsByPrice(double price) {
+        return clothesRepository.gadgetsByPrice(price);
+    }
+
+    //Reto 5
+    public List<Clothe> findByDescriptionLike(String description) {
+        return clothesRepository.findByDescriptionLike(description);
+    }
 }

@@ -110,4 +110,7 @@ public class UserServicio {
             return usuario.get();
         }
     }
+    public List<User> birthtDayList(String monthBirthtDay) {
+        return userRepository.birthtDayList(monthBirthtDay);
+    }
 }

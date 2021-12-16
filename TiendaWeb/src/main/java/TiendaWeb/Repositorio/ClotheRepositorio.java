@@ -34,4 +34,10 @@ public class ClotheRepositorio {
     public void delete(Clothe clothes) {
         clothesCrudrepository.delete(clothes);
     }
+    public List<Clothe> gadgetsByPrice(double precio) {
+        return clothesCrudrepository.findByPriceLessThanEqual(precio);
+    }
+    public List<Clothe> findByDescriptionLike(String description) {
+        return clothesCrudrepository.findByDescriptionLike(description);
+    }
 }

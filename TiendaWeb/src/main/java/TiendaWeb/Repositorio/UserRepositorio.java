@@ -13,6 +13,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class UserRepositorio {
+    
     @Autowired
     private InterfaceUser userCrudRepository;
     
@@ -48,5 +49,9 @@ public class UserRepositorio {
     
     public Optional<User> lastUserId(){
         return userCrudRepository.findTopByOrderByIdDesc();
+    }
+    
+    public List<User> birthtDayList(String monthBirthtDay) {
+        return userCrudRepository.findByMonthBirthtDay(monthBirthtDay);
     }
 }

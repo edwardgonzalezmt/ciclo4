@@ -54,5 +54,13 @@ public class ClotheControlador {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("reference") String reference) {
         return clothesService.delete(reference);
-    } 
+    }
+    @GetMapping("/price/{price}")
+    public List<Clothe> gadgetsByPrice(@PathVariable("price") double precio) {
+        return clothesService.gadgetsByPrice(precio);
+    }
+    @GetMapping("/description/{description}")
+    public List<Clothe> findByDescriptionLike(@PathVariable("description") String description) {
+        return clothesService.findByDescriptionLike(description);
+    }
 }
